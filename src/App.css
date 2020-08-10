@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-image: linear-gradient(to right bottom, #df159b, #ff506c, #ff9051, #f1c75e, #d7f596);
 }
 
 .App-logo {
@@ -35,4 +36,9 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.userc {
+  display: flex;
+  flex-direction: row;
 }
