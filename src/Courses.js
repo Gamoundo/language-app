@@ -1,31 +1,65 @@
 import React from 'react';
+import Course from './course'
 
 class Courses extends React.Component {
 
+    state = {
+        courses: [],
+        course: " "
+    }
+    
+    displayCourse = (text) => {
+    
+        this.setState({
+          course: text
+          
+        })
+      }
+    
+
+      rendercourses () {
+        // console.log(this.props.id)
+      return (this.state.courses.map((course) => {
+        // let callback = () => this.displaycourse(course)
+        return(
+            
+            <Course 
+            key={course.id}
+            name={course.name}
+            // click={callback}
+            owned={false}
+            />
+        )
+       }))
+    }
+
+    
+    componentDidMount() {
+       let user= window.localStorage.getItem("TheLinguist");
+    let  token = JSON.parse(user).userToken;
+
+        fetch("http://localhost:3000/courses", {
+            method: 'GET',
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: token,
+            Accept: "application/json"
+        }
+      })
+        .then(r => r.json())
+        .then(courses => this.setState({courses}));
+    }
     render() {
+        console.log(this.state.courses) 
         return (
             <div className="userc">
                 
         
                 
                 <div>
-                <button>Home</button>
-                <div>{this.props.user.name}, Ready to learn?</div>
-                 <div><h3>Russian</h3>
-                <button> add</button> </div>   
                 
-                <div>
-                <h3>Chinese</h3>
-                <button> add</button>  
-                </div>
-                <div>
-                <h3>Arabic</h3>
-                <button> add</button>  
-                </div>
-                <div>
-                <h3>Spanish</h3>
-                <button> add</button>  
-                </div>
+                <div>{this.props.user.username}, Ready to learn?</div>
+                <div>{this.state.courses.length > 0 && this.rendercourses()}</div>
                 </div>
                 
                 

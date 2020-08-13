@@ -1,15 +1,29 @@
 import React from 'react';
-
+import { NavLink } from 'react-router-dom';
 class UserCourse extends React.Component {
 
     render() {
         return (
             <div className="userc">
                 <div>
-                <h3 link_to='/russian' >Russian</h3>
+                <NavLink
+          to="/russian"
+          exact
+          
+          activeStyle={{
+            background: 'orange'
+          }}
+        >Russian</NavLink>
                 <button> delete</button> 
                 <div>
-                <h3>Chinese</h3>
+                <NavLink
+          to="/chinese"
+          exact
+          
+          activeStyle={{
+            background: 'orange'
+          }}
+        >Chinese</NavLink>
                 <button> delete</button>  
                 </div>
                 </div>

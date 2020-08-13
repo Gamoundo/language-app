@@ -5,8 +5,8 @@ import ReactPlayer from 'react-player';
 class Register extends React.Component {
   
     state = {
-        name: "",
-        passwword: ""
+        username: "",
+        password: ""
     }
     
     handleChange = (event) => {
@@ -18,9 +18,37 @@ class Register extends React.Component {
     handleSubmit = (event)  => {
         event.preventDefault();
         
-        this.props.changeUser(this.state.name, this.state.password)
-   console.log(this.state)
-       this.props.history.push(`/home`);
+        fetch("http://localhost:3000/users", {
+            method: 'POST',
+            body: JSON.stringify(this.state),
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json"
+            },
+            
+            
+        }).then(r => r.json())
+        .then(user => {
+            this.props.changeUser(this.state.username, this.state.password)
+            //    console.log(this.state)
+            //console.log(user)
+            if (!user.error) {
+                const userInfo = {
+                    userToken: user.token,
+                    username: user.user.username,
+                    user_id: user.user.id,
+                }
+                window.localStorage.setItem("TheLinguist", JSON.stringify(userInfo));
+                this.props.history.push(`/home`);
+            } else {
+                alert("Insufficient credentials")
+            }
+        })
+        
+        
+//         this.props.changeUser(this.state.name, this.state.password)
+//    console.log(this.state)
+//        this.props.history.push(`/home`);
        
     
     }
@@ -34,7 +62,7 @@ class Register extends React.Component {
       <form className="regform" onSubmit={this.handleSubmit}>
         <h1>Register</h1>
         <div>
-          <input type="text" name="name" value={this.state.name} onChange={this.handleChange} placeholder="Username" />
+          <input type="text" name="username" value={this.state.username} onChange={this.handleChange} placeholder="Username" />
           <label htmlFor="name">Name</label>
         </div>
         <div>

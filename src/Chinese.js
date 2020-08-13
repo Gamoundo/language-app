@@ -1,13 +1,13 @@
 import React from 'react';
 
-class Russian extends React.Component {
+class Chinese extends React.Component {
 
     render() {
-        console.log(this.props.user)
         return (
             <div className="userc">
                 <div>
-                <h1>{this.props.user.username}  давай учить русский </h1>
+                <h1>{this.props.user.username} 
+现在我们学习中文  </h1>
                 <div>
                 <h3>Food</h3>
                 <button> learn</button>
@@ -26,4 +26,4 @@ class Russian extends React.Component {
     }
 }
 
-export default Russian;
+export default Chinese;

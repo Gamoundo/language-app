@@ -8,24 +8,32 @@ import Navbar from './Navbar'
 import Home from './Home'
 import Courses from './Courses'
 import Russian from './Russian'
+import Chinese from './Chinese'
 
 
 
+const user= window.localStorage.getItem("TheLinguist");
+const  user_id = JSON.parse(user).user_id 
+  const  name= JSON.parse(user).username
 
 class App extends React.Component {
   
+  
+    
   state = {
     
-      name: 'Joey',
-      password: "sup"
+      username: name,
+      password: ""
    
   }
+
+  
   ChangeUser = (newName, newPassword) => {
-   return ( this.setState({
-      name: newName,
+   this.setState({
+      username: newName,
       password: newPassword
     })
-   )
+   
   }
   
   render (){
@@ -36,7 +44,7 @@ class App extends React.Component {
       <div className="App">
         <h1>The linguist</h1>
         <img src ="https://honeysanime.com/wp-content/uploads/2017/10/Sakamoto-desu-ga-crunchyroll-500x281.jpg" />
-      <Navbar />
+      <Navbar user={this.state}/>
       <Route exact path ="/login" render={ routerProps => <Login {...routerProps} changeUser ={this.ChangeUser} user={this.state}/>}> 
       </Route>
       <Route exact path ="/register" render={ routerProps => <Register {...routerProps} changeUser ={this.ChangeUser} user={this.state}/>}>  
@@ -45,7 +53,9 @@ class App extends React.Component {
       </Route>
       <Route exact path ="/courses" render={ routerProps => <Courses {...routerProps} user={this.state}/>}> 
       </Route>
-      <Route exact path ="/russian" render={ routerProps => <Russian {...routerProps} user={this.state.user}/>}> 
+      <Route exact path ="/russian" render={ routerProps => <Russian {...routerProps} user={this.state}/>}> 
+      </Route>
+      <Route exact path ="/chinese" render={ routerProps => <Chinese {...routerProps} user={this.state}/>}> 
       </Route>
      </div>
     </Router>
