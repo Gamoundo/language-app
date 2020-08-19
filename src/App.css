@@ -3,6 +3,7 @@
 .App {
   font-family: Bungee;
   text-align: center;
+  /* background-image: radial-gradient(circle, #0c0b0e, #3d2a39, #7d4654, #ba695c, #e59b59, #e99f55, #eda251, #f0a64d, #db7350, #b64955, #832a55, #4a184a); */
   background-image: linear-gradient(to right bottom, #df159b, #ff506c, #ff9051, #f1c75e, #d7f596);
 }
 
@@ -51,3 +52,9 @@
   background-color: transparent;
   
 }
+
+.img {
+  height: 300;
+  width: 248;
+}
+

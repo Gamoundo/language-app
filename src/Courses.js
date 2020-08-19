@@ -25,6 +25,7 @@ class Courses extends React.Component {
             
             <Course 
             key={course.id}
+            id={course.id}
             name={course.name}
             // click={callback}
             owned={false}
@@ -51,6 +52,7 @@ class Courses extends React.Component {
     }
     render() {
         console.log(this.state.courses) 
+        console.log(this.props)
         return (
             <div className="userc">
                 
@@ -58,7 +60,7 @@ class Courses extends React.Component {
                 
                 <div>
                 
-                <div>{this.props.user.username}, Ready to learn?</div>
+                <div>{this.props.user && this.props.user.username}, Ready to learn?</div>
                 <div>{this.state.courses.length > 0 && this.rendercourses()}</div>
                 </div>
                 

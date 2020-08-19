@@ -7,14 +7,22 @@ import Login from './Login'
 import Navbar from './Navbar'
 import Home from './Home'
 import Courses from './Courses'
-import Russian from './Russian'
-import Chinese from './Chinese'
+
+import UserCourse from "./UserCourses"
+
 
 
 
 const user= window.localStorage.getItem("TheLinguist");
-const  user_id = JSON.parse(user).user_id 
-  const  name= JSON.parse(user).username
+
+let name = ''
+
+
+if (user !==null) {
+  const  user_id = JSON.parse(user).user_id 
+    name = JSON.parse(user).username
+} 
+
 
 class App extends React.Component {
   
@@ -23,8 +31,9 @@ class App extends React.Component {
   state = {
     
       username: name,
-      password: ""
-   
+      password: "",
+      usercourse: []
+     
   }
 
   
@@ -53,10 +62,9 @@ class App extends React.Component {
       </Route>
       <Route exact path ="/courses" render={ routerProps => <Courses {...routerProps} user={this.state}/>}> 
       </Route>
-      <Route exact path ="/russian" render={ routerProps => <Russian {...routerProps} user={this.state}/>}> 
+      <Route exact path ="/usercourses/id" render={ routerProps => <UserCourse {...routerProps} user={this.state}/>}> 
       </Route>
-      <Route exact path ="/chinese" render={ routerProps => <Chinese {...routerProps} user={this.state}/>}> 
-      </Route>
+      
      </div>
     </Router>
     
