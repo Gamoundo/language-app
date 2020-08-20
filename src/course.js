@@ -43,7 +43,7 @@ class Course extends React.Component {
   render() {
     return (
         
-      <div className="container" >
+      <div  >
       <h4><b> {this.props.name}</b></h4> 
       <button onClick={this.addUserCourse} className='button'>Add</button>
    

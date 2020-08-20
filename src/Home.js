@@ -25,6 +25,7 @@ class Home extends React.Component {
 handleClick = (e) => {
     e.preventDefault();
     window.localStorage.clear();
+    this.props.changeUser("", this.state.password)
     this.props.history.push('/')
     
 }  
@@ -34,9 +35,7 @@ handleChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
 }
 
-changeName = (name) => {
-    this.setState({ username: name})
-}
+
 
 handleSubmit = (event) => {
     event.preventDefault();
@@ -72,7 +71,7 @@ fetch(`http://localhost:3000/${user_id}`, {
                     user_id: user.id
                 }
                 window.localStorage.setItem("TheLinguist", JSON.stringify(userInfo));
-                this.changeName(this.state.username)
+                this.props.changeName(this.state.username)
                 this.props.history.push(`/home`);
             } 
         })

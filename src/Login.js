@@ -41,6 +41,8 @@ class Login extends React.Component {
                     this.props.history.push(`/home`);
                 } else {
                     alert("Insufficient credentials")
+                    this.props.changeUser("", this.state.password);
+                    this.props.history.push(`/login`);
                 }
             })
 

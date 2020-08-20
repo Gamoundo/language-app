@@ -1,6 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Montserrat&display=swap");
 
+body {
+  height: 100vh;
+}
+
+
 .App {
+  height: 100vh;
   font-family: Bungee;
   text-align: center;
   /* background-image: radial-gradient(circle, #0c0b0e, #3d2a39, #7d4654, #ba695c, #e59b59, #e99f55, #eda251, #f0a64d, #db7350, #b64955, #832a55, #4a184a); */
@@ -45,16 +51,24 @@
 .userc {
   display: flex;
   flex-direction: row;
+  
 }
 
 .invisform {
   border: none;
   background-color: transparent;
+  margin-top: 2rem;
+  font-size: 3rem;
   
+}
+.invisform:hover {
+  cursor: pointer;
 }
 
 .img {
   height: 300;
   width: 248;
 }
+
+
 

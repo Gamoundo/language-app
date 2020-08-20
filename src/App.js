@@ -36,7 +36,11 @@ class App extends React.Component {
      
   }
 
-  
+  changeName = (name) => {
+    this.setState({ username: name})
+}
+
+
   ChangeUser = (newName, newPassword) => {
    this.setState({
       username: newName,
@@ -58,7 +62,7 @@ class App extends React.Component {
       </Route>
       <Route exact path ="/register" render={ routerProps => <Register {...routerProps} changeUser ={this.ChangeUser} user={this.state}/>}>  
       </Route>
-      <Route exact path ="/home" render={ routerProps => <Home {...routerProps} changeUser ={this.ChangeUser} user={this.state}/>}> 
+      <Route exact path ="/home" render={ routerProps => <Home {...routerProps} changeUser ={this.ChangeUser}  changeName={this.changeName} user={this.state}/>}> 
       </Route>
       <Route exact path ="/courses" render={ routerProps => <Courses {...routerProps} user={this.state}/>}> 
       </Route>
