@@ -8,6 +8,6 @@ class CoursesController < ApplicationController
 
     def show
         course = Course.find_by(id: params[:id])
-        render json: course.usercourse
+        render json: course
     end
 end
