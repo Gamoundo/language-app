@@ -57,8 +57,8 @@ class Login extends React.Component {
         console.log(this.state.username)
         console.log(this.state.password)
         return (
-            <div>
-                <form className="logform" onSubmit={this.handleSubmit}>
+            <div className="App">
+                <form  onSubmit={this.handleSubmit}>
                     <h1>Login</h1>
                     <div>
                         <input type="text" name="username" placeholder="Username" value={this.state.username} onChange={this.handleChange} placeholder="Username" />

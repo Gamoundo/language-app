@@ -47,7 +47,7 @@ class LessonContainer extends React.Component {
         console.log(this.state.lessons)
         
         return(
-            <div>
+            <div className="lessonsWrapper">
                 <h2>{this.props.name}</h2>
                 <button onClick={this.handleShow}> learn</button>
                 { this.state.show && this.renderLessons()}

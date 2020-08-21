@@ -61,8 +61,8 @@ class Register extends React.Component {
     render() {
         
         return (
-      <div>
-      <form className="regform" onSubmit={this.handleSubmit}>
+      <div className="App">
+      <form  onSubmit={this.handleSubmit}>
         <h1>Register</h1>
         <div>
           <input type="text" name="username" value={this.state.username} onChange={this.handleChange} placeholder="Username" />

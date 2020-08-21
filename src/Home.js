@@ -182,12 +182,12 @@ render() {
                         
                     </div>
         </form>
-      
+        <button onClick={this.handleClick}>Logout</button>
 
-  <div>
+  <div className="App">
   {this.state.usercourse.length > 0 && this.rendercourses()}
   </div>
-  <button onClick={this.handleClick}>Logout</button>
+  
       
     </div>
     
