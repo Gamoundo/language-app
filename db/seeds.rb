@@ -439,3 +439,96 @@ Lesson.create!(
     translation: 'مغني',
     course_id: arabic.id
 )
+
+Lesson.create!(
+    name: "hello",
+    img: "https://lh3.googleusercontent.com/6Adeoocj4FktXRmkcFY8j6sknDBK_eoCjsMv6EPJI_ZLhLUeAmZH_r5QxKBBa8xoxgni",
+    category: "phrases",
+    translation: '你好',
+    course_id: chinese.id
+)
+
+Lesson.create!(
+    name: "goodbye",
+    img: "https://thumbs.gfycat.com/RepulsiveInnocentFairybluebird-size_restricted.gif",
+    category: "phrases",
+    translation: '再见',
+    course_id: chinese.id
+)
+
+Lesson.create!(
+    name: "Apple pie is life",
+    img: "https://www.spendwithpennies.com/wp-content/uploads/2018/09/SpendWithPennies-Apple-Pie-Recipe-31-500x500.jpg",
+    category: "phrases",
+    translation: '我最喜欢吃苹果派',
+    course_id: chinese.id
+)
+
+Lesson.create!(
+    name: "Where is the bathroom",
+    img: "https://cdn.lowgif.com/full/09557efa4b92a94d-rushing-gifs-on-giphy.gif",
+    category: "phrases",
+    translation: '洗手间在哪里？',
+    course_id: chinese.id
+)
+
+Lesson.create!(
+    name: "There is no bathroom here",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTFWvdGsjovXSZKl3FKs6xaE5UC4nZrsIBLIA&usqp=CAU",
+    category: "phrases",
+    translation: '我们没有洗手间',
+    course_id: chinese.id
+)
+
+Lesson.create!(
+    name: "What",
+    img: "https://www.the-arcade.ie/wp-content/uploads/2015/11/shock-gif.gif",
+    category: "phrases",
+    translation: '什么',
+    course_id: chinese.id
+)
+
+Lesson.create!(
+    name: "Hello",
+    img: "https://lh3.googleusercontent.com/6Adeoocj4FktXRmkcFY8j6sknDBK_eoCjsMv6EPJI_ZLhLUeAmZH_r5QxKBBa8xoxgni",
+    category: "phrases",
+    translation: 'zdravo',
+    course_id: bosnian.id
+)
+
+Lesson.create!(
+    name: "goodbye",
+    img: "https://thumbs.gfycat.com/RepulsiveInnocentFairybluebird-size_restricted.gif",
+    category: "phrases",
+    translation: 'zbogom, zdravo',
+    course_id: bosnian.id
+)
+
+Lesson.create!(
+    name: "Where is the supermarket?",
+    img: "https://www.hiregrowth.org/wp-content/uploads/2015/12/Job-Search-Cartoon.jpg",
+    category: "phrases",
+    translation: 'gdje je supermarket',
+    course_id: bosnian.id
+)
+
+Lesson.create!(
+    name: "It is on your left",
+    img: "https://i.ytimg.com/vi/TLaIbioqflw/maxresdefault.jpg",
+    category: "phrases",
+    translation: 'to je s vaše lijeve strane',
+    course_id: bosnian.id
+)
+
+Lesson.create!(
+    name: "Thank you",
+    img: "https://i.imgur.com/Ow9ydMP.gif",
+    category: "phrases",
+    translation: 'hvala ti',
+    course_id: bosnian.id
+)
+
+
+
+
+
