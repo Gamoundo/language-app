@@ -2,7 +2,8 @@
 
 body {
   height: 100hv;
-  background-image: linear-gradient(to right bottom, #df159b, #ff506c, #ff9051, #f1c75e, #d7f596);
+  /* background-image: linear-gradient(to right bottom, #df159b, #ff506c, #ff9051, #f1c75e, #d7f596); */
+  background-color: papayawhip;
 }
 
 
@@ -11,7 +12,8 @@ body {
   font-family: Bungee;
   text-align: center;
   /* background-image: radial-gradient(circle, #0c0b0e, #3d2a39, #7d4654, #ba695c, #e59b59, #e99f55, #eda251, #f0a64d, #db7350, #b64955, #832a55, #4a184a); */
-  background-image: linear-gradient(to right bottom, #df159b, #ff506c, #ff9051, #f1c75e, #d7f596);
+  /* background-image: linear-gradient(to right bottom, #df159b, #ff506c, #ff9051, #f1c75e, #d7f596); */
+  background-color: lemonchiffon;
 }
 
 .App-logo {
@@ -72,8 +74,10 @@ body {
 }
 
 .lessons {
-  background-image: radial-gradient(circle, #0c0b0e, #3d2a39, #7d4654, #ba695c, #e59b59, #e99f55, #eda251, #f0a64d, #db7350, #b64955, #832a55, #4a184a);
-  
+  /* background-image: radial-gradient(circle, #0c0b0e, #3d2a39, #7d4654, #ba695c, #e59b59, #e99f55, #eda251, #f0a64d, #db7350, #b64955, #832a55, #4a184a); */
+  background-color: blanchedalmond;
+  border: 1px solid coral;
+  padding: 20px;
 }
 
 /* .lessonsWrapper {
@@ -81,4 +85,20 @@ body {
   background-image: linear-gradient(to right bottom, #df159b, #ff506c, #ff9051, #f1c75e, #d7f596);
 } */
 
+.game {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: peachpuff;
+  padding: 10px;
+  height: 600px;
+  width: 600px;
+  border: 1px solid coral;
+}
 
+.gameTile {
+  background-color: blanchedalmond;
+  border: 1px solid coral;
+  padding: 20px;
+  height: 100px;
+  width: 100px;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import Lesson from "./Lesson"
+import Game from './Game';
 
 
 
@@ -34,6 +35,26 @@ class LessonContainer extends React.Component {
         )
        }))
     }
+
+    // renderGame = () => {
+        
+    //     return (this.state.lessons.map((lesson) => {
+          
+    //       console.log(lesson)
+    //       return(
+              
+    //           <Game
+    //               key={lesson.id}
+    //               name={lesson.name}
+    //               translation={lesson.translation}
+    //               img={lesson.img} 
+    //               />
+    //       )
+    //      }))
+    //   }
+
+
+
     
     render() {
       
@@ -47,11 +68,18 @@ class LessonContainer extends React.Component {
         console.log(this.state.lessons)
         
         return(
-            <div className="lessonsWrapper">
+            <div>
+                
+                <div className="lessonsWrapper">
+                
                 <h2>{this.props.name}</h2>
                 <button onClick={this.handleShow}> learn</button>
-                { this.state.show && this.renderLessons()}
+                <Game tiles={this.state.lessons}/>
+                
             </div>
+            
+            </div>
+            
         )
     }
 
