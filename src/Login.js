@@ -57,7 +57,7 @@ class Login extends React.Component {
         console.log(this.state.username)
         console.log(this.state.password)
         return (
-            <div className="App">
+            <div className="login">
                 <form  onSubmit={this.handleSubmit}>
                     <h1>Login</h1>
                     <div>

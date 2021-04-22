@@ -70,11 +70,12 @@ class LessonContainer extends React.Component {
         return(
             <div>
                 
-                <div className="lessonsWrapper">
+                <div >
                 
                 <h2>{this.props.name}</h2>
                 <button onClick={this.handleShow}> learn</button>
-                <Game tiles={this.state.lessons}/>
+                {this.state.show && this.renderLessons()}
+                {!this.state.show && <Game tiles={this.state.lessons}/>}
                 
             </div>
             

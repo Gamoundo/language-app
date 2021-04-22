@@ -61,7 +61,7 @@ class Register extends React.Component {
     render() {
         
         return (
-      <div className="App">
+      <div className="login">
       <form  onSubmit={this.handleSubmit}>
         <h1>Register</h1>
         <div>

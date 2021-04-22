@@ -6,7 +6,7 @@ class Game extends React.Component {
     renderGames = () => {
         return (this.props.tiles.map((tile) => {
             return (
-                <div>
+                <div key={tile.id}>
                     <div className="gameTile">
                     {tile.translation}
                 </div>
